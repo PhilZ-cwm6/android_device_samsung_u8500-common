@@ -38,6 +38,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/lib/egl/egl.cfg:system/lib/egl/egl.cfg
 PRODUCT_PACKAGES += \
     libblt_hw
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=131072 \
+    debug.hwui.render_dirty_regions=false \
+    persist.sys.use_dithering=2 \
+    persist.sys.strictmode.disable=1
+
+# Screen
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=240 \
+    ro.sf.display_rotation=0 \
+    ro.lcd_brightness=170 \
+    ro.lcd_min_brightness=30
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -46,16 +58,36 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/omxloaders:system/omxloaders
 PRODUCT_PACKAGES += \
     libomxil-bellagio
+PRODUCT_PROPERTY_OVERRIDES += \
+    ste.nmf.autoidle=1 \
+    ste.video.dec.mpeg4.in.size=8192 \
+    ste.video.enc.out.buffercnt=5 \
+    ste.video.dec.recycle.delay=1 \
+    ste.omx.ctx=0
+
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    ste.cam.front.orientation=270 \
+    ste.cam.back.orientation=90
 
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 PRODUCT_PACKAGES += \
     libnetcmdiface
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0 \
+    wifi.supplicant_scan_interval=15
 
 # RIL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/ste_modem.sh:system/etc/ste_modem.sh
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=SamsungU8500RIL \
+    ro.telephony.sends_barcount=1 \
+    ro.ril.hsxpa=1 \
+    ro.ril.gprsclass=10 \
+    ro.telephony.call_ring.multiple=false
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -68,6 +100,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default
+
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp \
+    ste.special_fast_dormancy=false
 
 # Sensors
 PRODUCT_PACKAGES += \
