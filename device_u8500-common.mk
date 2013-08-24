@@ -27,7 +27,7 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Inherit the proprietary vendors blobs for Samsung U8500 devices
-# $(call inherit-product-if-exists, vendor/samsung/u8500-common/common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/u8500-common/u8500-common-vendor.mk)
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
@@ -103,7 +103,8 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp \
+    persist.sys.usb.config=mtp,adb \
+    persist.service.adb.enable=1 \
     ste.special_fast_dormancy=false
 
 # Sensors
