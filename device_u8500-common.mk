@@ -91,7 +91,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/etc/sirfgps.conf:system/etc/sirfgps.conf
+    $(LOCAL_PATH)/configs/etc/sirfgps.conf:system/etc/sirfgps.conf \
+    $(LOCAL_PATH)/configs/etc/gps.conf:system/etc/gps.conf
 
 # Audio
 PRODUCT_COPY_FILES += \
