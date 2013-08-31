@@ -28,6 +28,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/init.samsung-u8500.usb.rc:root/init.samsung-u8500.usb.rc \
     $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc
 
 # Graphics
