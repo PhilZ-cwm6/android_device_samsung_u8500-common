@@ -100,6 +100,8 @@ PRODUCT_PACKAGES += \
     libasound \
     audio.a2dp.default \
     audio.usb.default
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.vc_call_vol_steps=9
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
