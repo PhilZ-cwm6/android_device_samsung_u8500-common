@@ -53,7 +53,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/omxloaders:system/omxloaders
+    $(LOCAL_PATH)/configs/etc/omxloaders:system/etc/omxloaders
 PRODUCT_PACKAGES += \
     libomxil-bellagio
 PRODUCT_PROPERTY_OVERRIDES += \
