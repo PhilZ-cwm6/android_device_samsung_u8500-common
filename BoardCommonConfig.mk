@@ -31,6 +31,7 @@ COMMON_GLOBAL_CFLAGS += -DSTE_HARDWARE -DSTE_SAMSUNG_HARDWARE
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a9
+TARGET_CPU_VARIANT:= cortex-a9
 TARGET_CPU_SMP := true
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -68,9 +69,6 @@ BOARD_NO_APSME_ATTR := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-
-# RIL
-BOARD_RIL_CLASS := ../../../device/samsung/u8500-common/ril/
 
 # Browser
 ENABLE_WEBGL := true

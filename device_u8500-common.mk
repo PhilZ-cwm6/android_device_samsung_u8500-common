@@ -82,7 +82,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/ste_modem.sh:system/etc/ste_modem.sh
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=SamsungU8500RIL \
+    ro.telephony.ril_class=SamsungExynos4RIL \
     ro.telephony.sends_barcount=1 \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
