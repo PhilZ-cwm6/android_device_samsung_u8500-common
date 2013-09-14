@@ -28,14 +28,15 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.samsung-u8500.usb.rc:root/init.samsung-u8500.usb.rc \
     $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc
 
 # Graphics
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/lib/egl/egl.cfg:system/lib/egl/egl.cfg
+
 PRODUCT_PACKAGES += \
     libblt_hw
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
     debug.hwui.render_dirty_regions=false \
@@ -55,6 +56,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/etc/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/etc/omxloaders:system/etc/omxloaders
+
 PRODUCT_PACKAGES += \
     libomxil-bellagio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -72,6 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+
 PRODUCT_PACKAGES += \
     libnetcmdiface
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -81,6 +84,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # RIL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/ste_modem.sh:system/etc/ste_modem.sh
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungExynos4RIL \
     ro.telephony.sends_barcount=1 \
@@ -97,6 +101,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/configs/etc/asound.conf:system/etc/asound.conf
+
 PRODUCT_PACKAGES += \
     libasound \
     audio.a2dp.default \
