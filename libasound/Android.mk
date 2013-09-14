@@ -38,6 +38,7 @@ LOCAL_SRC_FILES := $(filter-out src/pcm/scopes/level.c, $(LOCAL_SRC_FILES))
 LOCAL_SRC_FILES := $(filter-out src/shmarea.c, $(LOCAL_SRC_FILES))
 
 LOCAL_SHARED_LIBRARIES := \
+    liblog \
     libdl
 
 include $(BUILD_SHARED_LIBRARY)
