@@ -79,9 +79,6 @@ ENABLE_WEBGL := true
 BOARD_USES_ALSA_AUDIO := true
 COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB
 
-# USB Mounting
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/musb-ux500.0/musb-hdrc/gadget/lun%d/file"
-
 # Charging mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 BOARD_BATTERY_DEVICE_NAME := "battery"
